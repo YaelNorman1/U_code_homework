@@ -1,0 +1,24 @@
+.box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button{
+    background-color: green;
+    border:green ;
+    box-shadow:chartreuse
+}
+
+#container{
+    background-color: gray;
+}
+
+#first {
+    background-color: green;
+}
+
+#second {
+    background-color: orange;
+}

@@ -1,0 +1,11 @@
+body {
+    background-image: url('img_girl.jpg');
+}
+
+h1 {
+    background-color:blueviolet;
+}
+
+.transparent {
+    opacity: 0.2;
+}
