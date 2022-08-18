@@ -1,0 +1,32 @@
+#container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "h h s s m m"
+    "h h s s m m"
+    "h h . . m m"
+    "h h f f m m"
+    "h h f f m m";
+    grid-gap: 10px;
+}
+.head{
+    grid-area: h;
+    background-color: antiquewhite;
+}
+
+.side-nav{
+    grid-area: s;
+    background-color:aquamarine;
+}
+
+.main{
+    grid-area: m;
+    background-color:burlywood;
+}
+
+.foot{
+    grid-area: f;
+    background-color:darkkhaki;
+}
