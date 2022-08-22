@@ -37,19 +37,36 @@ const ModuleData = function () {
     //maybe save the only post and not copy like i did (Oriya did it)
     const removePost = function (pid) {
 
-        //_posts.splice(id,1);
-
         tempArr= _posts.filter(data => data.id != pid);
         _posts= tempArr;
     
     }
 
-    const addComment = function (pid, text) {
-        _posts[pid].comments.push(text);
+    const addComment = function (pid, ctext) {
 
+        _conterComment += 1;
+        const newComment= { id: `c${_conterComment}`, text: ctext };
+
+        let wantedPost= findPostByID(pid);
+        if (wantedPost)
+            wantedPost["comments"].push(newComment); 
+
+        console.log(wantedPost);
+    }
+
+    const findPostByID = function(id){
+
+        for (let i=0; i<_posts.length; i++){
+            if (_posts[i]["id"]=== id) {
+                return _posts[i];
+            }
+        }
     }
 
     const removeComment = function (pid, cid) {
+        let wantedPost= findPostByID(pid);
+        updatedComments= wantedPost["comments"].filter(data =>data.id !== cid);
+        wantedPost["comments"]= updatedComments;
 
     }
 
@@ -77,13 +94,13 @@ tweeter.removePost("p2");
 tweeter.removePost("p3");
 console.log(tweeter.getPosts());
 
-// tweeter.addComment("p1", "aiiiii");
-// tweeter.addComment("p1", "biiiii");
-// tweeter.addComment("p2", "ciiiii");
-// tweeter.addComment("p4", "diiiii");
-// tweeter.addComment("p5", "eiiiii");
-// console.log(tweeter.getPosts());
+tweeter.addComment("p1", "aiiiii");
+tweeter.addComment("p1", "biiiii");
+tweeter.addComment("p2", "ciiiii");
+tweeter.addComment("p4", "diiiii");
+tweeter.addComment("p5", "eiiiii");
+console.log(tweeter.getPosts());
 
-// tweeter.removeComment("p1", "c2");
-// tweeter.removeComment("p4", "c3");
-// console.log(tweeter.getPosts());
+tweeter.removeComment("p1", "c2");
+tweeter.removeComment("p4", "c3");
+console.log(tweeter.getPosts());
