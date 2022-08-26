@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="classmates"></div>  
+    <div class="languages"> </div>
+    <div class="animals"> </div>
+
+
+    <script id="languages-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each languages}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        </script>
+    <script id="animal-template" type="text/x-handlebars-template">
+    <ul>
+        {{#each animals}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    </script>
+    <!-- <script id="classData-template" type="text/x-handlebars-template">
+    <ul>
+        {{#each classmates}}
+        <li>{{name}} : {{description}}</li>
+        {{/each}}
+    </ul>
+    </script>
+
+    <div class="menu">
+    </div>
+
+    <script id="store-template" type="text/x-handlebars-template">
+        <p>
+          <span> {{ item }} </span> - <span>{{ price }} Dollars </span>
+        </p>
+    </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
