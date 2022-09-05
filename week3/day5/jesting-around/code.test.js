@@ -33,22 +33,10 @@ test("should verify that there is at least one boolean in the array, or return t
     let ex= new Exercises();
 
     let result= ex.validate([false,true])
-    expect(result).toBeFalsy()      //typeof(result)== false
-
-    //result= ex.validate([false,true])
+    expect(result).toBeFalsy()      
     expect(ex.validate([false,true,true])).toBeTruthy()
     expect(ex.validate([1,2])).toMatchObject({error: 'Need at least one boolean'})
 
 })
 
 
-
-
-
-
-
-// const add = require('./code')
-// test("add should return sum of a + b", () => {
-//     let sum = add(1, 2)
-//     expect(sum).toBe(3)
-// })
