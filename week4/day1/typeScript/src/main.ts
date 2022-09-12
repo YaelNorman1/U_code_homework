@@ -50,3 +50,4 @@ console.log(student1.getGradeAvg());
 
 // students.forEach(student => {
 //     console.log(`${student.full_name}: ${student.getGradeAvg()}`);
+

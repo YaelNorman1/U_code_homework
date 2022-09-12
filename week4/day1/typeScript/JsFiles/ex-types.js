@@ -38,3 +38,4 @@ print_numbers(972528684411);
 print_numbers([972528684411, 9725242223]);
 print_numbers("052863423243");
 print_numbers(["052343434286", "0547734343"]);
+//# sourceMappingURL=ex-types.js.map

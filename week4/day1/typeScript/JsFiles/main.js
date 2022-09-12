@@ -39,3 +39,4 @@ console.log(student1.getGradeAvg());
 // const students: Student[] = [student1, student2, student3];
 // students.forEach(student => {
 //     console.log(`${student.full_name}: ${student.getGradeAvg()}`);
+//# sourceMappingURL=main.js.map
